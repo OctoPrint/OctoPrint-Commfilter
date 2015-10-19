@@ -1,0 +1,44 @@
+<form class="form-horizontal">
+    <legend>{{ _('Filtered GCODEs') }}</legend>
+    <p>{{ _('Lines containing any of the GCODEs defined below will be filtered out before queuing/sending. Comma-separated lists.') }}</p>
+    <div class="control-group">
+        <label class="control-label">{{ _('Queuing phase') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: gcode_queuing">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Sending phase') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: gcode_sending">
+        </div>
+    </div>
+    <legend>{{ _('Filtered regular expressions') }}</legend>
+    <p>{{ _('Lines matching any of the <a href="%%(regex_url)s">regular expression patterns</a> defined below will be filtered out before queuing/sending. One pattern per line.')|format(regex_url="https://docs.python.org/2/library/re.html#regular-expression-syntax") }}</p>
+    <div class="control-group">
+        <label class="control-label">{{ _('Queuing phase') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: regex_queuing"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Sending phase') }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: regex_sending"></textarea>
+        </div>
+    </div>
+    <legend>{{ _('Filtered command types') }}</legend>
+    <p>{{ _('Lines containing commands matching any of the command types defined below will be filtered out before queuing/sending. Comma separated lists.') }}</p>
+    <div class="control-group">
+        <label class="control-label">{{ _('Queuing phase') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: command_type_queuing">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Sending phase') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: command_type_sending">
+        </div>
+    </div>
+</form>
