@@ -1,3 +1,5 @@
+> ✋ **Provided as is, no support, no maintenance**
+
 # OctoPrint-Commfilter
 
 The Commfilter plugin is useful in those situations where your workflow somehow
